@@ -1,10 +1,25 @@
-describe('Sign Up Magento', () => {
-  it('sukses daftar', () => {
-    cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
-    cy.get('[id="firstname"]').type("Elvanisa")
-    cy.get('[id="lastname"]').type("Muhsina")
-    cy.get('[id="email_address"]').type("elvanisamuhsina@gmail.com")
-    cy.get('[id="password"]').type("admin123")
-    cy.get('[id="password-confirmation"]').type("admin123")
-  });
+/// <reference types="cypress" />
+//import CreateAccount from '../support/pageObjects/createAccount.page';
+
+describe('Create Account', () => {
+
+  before(function(){
+    cy.fixture('createAccount').then(function(data){
+      this.data=data
+    })
+  })
+
+    it('gagal daftar', function() {
+      cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
+      cy.get('#firstname').type(this.data.firstName)
+      cy.get('#lastname').type(this.data.lastName)
+      cy.get('#is_subscribed').click()
+      cy.get('#email_address').type(this.data.email)
+      cy.get('#password').type(this.data.password)
+      cy.get('#password-confirmation').type(this.data.password)
+      cy.get('#password-strength-meter').should('be.visible')
+    });
+  
+
+  
 })
