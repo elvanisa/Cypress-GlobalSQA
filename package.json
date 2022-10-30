@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^10.11.0",
+    "prettier": "^2.7.1"
+  },
+  "name": "nest",
+  "version": "1.0.0",
+  "description": "NEST Final Project Kelompok 1",
+  "main": "index.js",
+  "repository": "https://github.com/elvanisa/Automation-Cypress.git",
+  "author": "kelompok 1",
+  "license": "MIT"
+}
