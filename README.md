@@ -15,3 +15,5 @@ npm install cypress
 
 **Install Yarn**
 yarn add cypress --dev
+yarn add prettier
+yarn add @cypress/browserify-preprocessor
