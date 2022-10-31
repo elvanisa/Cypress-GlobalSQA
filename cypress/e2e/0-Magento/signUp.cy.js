@@ -18,6 +18,7 @@ describe('Create Account', () => {
       cy.get('#password').type(this.data.password)
       cy.get('#password-confirmation').type(this.data.password)
       cy.get('#password-strength-meter').should('be.visible')
+      //cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
     });
   
 
