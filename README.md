@@ -6,8 +6,6 @@ Kelompok 1
 - Rahul Joshua Damanik
 - pesta windi oktaviani
 
-
-
 **Install Cypress**
 npm install cypress
 
@@ -16,7 +14,5 @@ npm install cypress
 **Install Yarn**
 
 yarn add cypress --dev
-
 yarn add prettier
-
 yarn add @cypress/browserify-preprocessor

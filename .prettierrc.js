@@ -1,5 +1,3 @@
-module.exports = {
-    printWidth: 120,
-    trailingComma: "none",
-    tabWidth: 2
-}
+export const printWidth = 120;
+export const trailingComma = "none";
+export const tabWidth = 2;

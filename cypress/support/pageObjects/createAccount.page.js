@@ -1,10 +1,22 @@
+before(function(){
+    cy.fixture('createAccount').then(function(data){
+      this.data=data
+    })
+  })
+
 class CreateAccount {
     firstName = '#firstname'
+    lastName = '#lastname'
     
 
-    inputFirstName() {
+    inputFirstName(){
         cy.get(this.firstName)
-        type("Elvanisa")
+        .type(this.data.firstName)
+    }
+
+    inputlastName(){
+        cy.get(this.lastName)
+        .type(this.data.lastName)
     }
 
 

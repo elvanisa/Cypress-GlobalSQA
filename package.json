@@ -4,7 +4,7 @@
     "cypress": "^10.11.0",
     "prettier": "^2.7.1"
   },
-  "name": "nest",
+  "name": "nestfinalproject",
   "version": "1.0.0",
   "description": "NEST Final Project Kelompok 1",
   "main": "index.js",
