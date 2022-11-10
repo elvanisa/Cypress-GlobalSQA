@@ -8,6 +8,10 @@
   "version": "1.0.0",
   "description": "NEST Final Project Kelompok 1",
   "main": "index.js",
+  "scripts": {
+    "cypress:open": "npx cypress open",
+    "cypress:run": "cypress run –browser cypress run –browser chrome"
+  },
   "repository": "https://github.com/elvanisa/Automation-Cypress.git",
   "author": "kelompok 1",
   "license": "MIT"
