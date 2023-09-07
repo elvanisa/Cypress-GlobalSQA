@@ -10,17 +10,16 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          spec: cypress/e2e/GlobalSQA/customer.cy.js
+          spec: cypress/e2e/orange.cy.js
       - name: Regression Cypress Electron
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress/e2e/GlobalSQA/customer.cy.js
+          spec: cypress/e2e/orange.cy.js
       - name: Regression Cypress Firefox
         uses: cypress-io/github-action@v6
         with:
           browser: firefox
-          spec: |
-            cypress/e2e/GlobalSQA/*.cy.js
+          spec: 
             cypress/e2e/orange.cy.js
       - uses: actions/upload-artifact@v3
         if: failure()
