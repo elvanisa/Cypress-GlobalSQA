@@ -9,8 +9,8 @@ jobs:
       - name: Regression Cypress run
         uses: cypress-io/github-action@v6
         with:
+          browser: chrome
           spec: cypress/e2e/GlobalSQA/customer.cy.js
-        browser: chrome
       - uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
