@@ -10,9 +10,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           spec: |
-          cypress/e2e/GlobalSQA/customer.cy.js
-          cypress/e2e/GlobalSQA/Member.cy.js
-          browser: chrome
+          'cypress/e2e/GlobalSQA/customer.cy.js'
+          'cypress/e2e/GlobalSQA/Member.cy.js'
+        browser: chrome
       - uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
