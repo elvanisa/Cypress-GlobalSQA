@@ -6,9 +6,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Regression Cypress run
         uses: cypress-io/github-action@v6
         with:
-          spec: 'cypress/e2e/GlobalSQA/customer.cy.js'
+          spec: |
+          cypress/e2e/GlobalSQA/customer.cy.js
+          cypress/e2e/GlobalSQA/Member.cy.js
+          browser: chrome
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          if-no-files-found: ignore
