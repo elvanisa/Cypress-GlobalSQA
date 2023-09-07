@@ -1,5 +1,11 @@
 name: End-to-end tests
-on: [push]
+
+on: 
+  push:
+    paths:
+    - 'cypress/e2e/GlobalSQA/**'
+
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
