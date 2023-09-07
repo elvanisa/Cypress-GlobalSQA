@@ -1,5 +1,10 @@
 name: Orange tests
-on: [push]
+on: 
+  push:
+    paths:
+    - 'cypress/e2e/Orange**'
+  workflow_dispatch:
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
