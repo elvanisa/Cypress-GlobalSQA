@@ -25,8 +25,7 @@ describe('Bank Manager Login', () => {
 
     it('Open Account', function() {
       cy.get('[ng-class="btnClass2"]').click()
-      cy.ketik('#userSelect','Hermoine Granger' )
-      //cy.get('#userSelect').select('Hermoine Granger')
+      cy.get('#userSelect').select('Hermoine Granger')
       cy.get('#currency').select('Dollar')
       cy.get('form.ng-dirty > button').click()
     });
