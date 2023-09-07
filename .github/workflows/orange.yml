@@ -15,17 +15,17 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          spec: cypress/e2e/orange.cy.js
+          spec: cypress/e2e/Orange/*js
       - name: Orange Cypress Electron
         uses: cypress-io/github-action@v6
         with:
-          spec: cypress/e2e/orange.cy.js
+          spec: cypress/e2e/Orange/*js
       - name: Orange Cypress Firefox
         uses: cypress-io/github-action@v6
         with:
           browser: firefox
           spec: 
-            cypress/e2e/orange.cy.js
+            cypress/e2e/Orange/*.js
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
