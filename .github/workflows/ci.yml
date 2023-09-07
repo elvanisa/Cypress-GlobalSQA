@@ -8,5 +8,8 @@ jobs:
         uses: actions/checkout@v3
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Regression Cypress run
         uses: cypress-io/github-action@v6
+        with:
+        command: npx cypress run --chrome browser
+        spec: 'cypress/e2e/GlobalSQA/customer.cy.js'
