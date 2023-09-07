@@ -6,10 +6,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Regression Cypress run
+      - name: Regression Cypress Chrome
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          spec: cypress/e2e/GlobalSQA/customer.cy.js
+      - name: Regression Cypress Firefox
+        uses: cypress-io/github-action@v6
+        with:
+          browser: firefox
           spec: cypress/e2e/GlobalSQA/customer.cy.js
       - uses: actions/upload-artifact@v3
         if: failure()

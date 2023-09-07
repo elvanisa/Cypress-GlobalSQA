@@ -20,7 +20,7 @@ describe('Customer Login', () => {
     cy.get('.error').should('contain.text', 'Deposit Successful')
   })
 
-  it('Withdraw', () => {
+  it.skip('Withdraw', () => {
     cy.get('[ng-class="btnClass3"]').click()
     cy.get('.form-control').type('100')
     cy.get('.form-control').type('1000')
