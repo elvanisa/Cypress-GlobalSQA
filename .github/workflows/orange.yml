@@ -1,4 +1,4 @@
-name: End-to-end tests
+name: Orange tests
 on: [push]
 jobs:
   cypress-run:
@@ -6,16 +6,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Regression Cypress Chrome
+      - name: Orange Cypress Chrome
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
           spec: cypress/e2e/orange.cy.js
-      - name: Regression Cypress Electron
+      - name: Orange Cypress Electron
         uses: cypress-io/github-action@v6
         with:
           spec: cypress/e2e/orange.cy.js
-      - name: Regression Cypress Firefox
+      - name: Orange Cypress Firefox
         uses: cypress-io/github-action@v6
         with:
           browser: firefox

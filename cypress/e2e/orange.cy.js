@@ -1,6 +1,6 @@
 describe('template spec', () => {
     beforeEach(() => {
-      cy.visit(Cypress.env('orange_url'))
+      cy.visit('https://opensource-demo.orangehrmlive.com/')
     })
     it('failed login', () => {
       cy.get('[name="username"]').type(Cypress.env('username'))
