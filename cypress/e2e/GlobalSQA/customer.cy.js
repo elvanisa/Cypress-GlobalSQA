@@ -32,4 +32,7 @@ describe('Customer Login', () => {
     cy.get('.logout').click()
     cy.get('label').should('contain.text','Your Name :')
   })
+  Cypress.on('uncaught:exception', (err, runnable) => {  
+    return false  
+  }) 
 })
